@@ -8,8 +8,100 @@ $color-gray-teal:#D9D9D9;
 $color-gray-light: rgba(0, 0, 0, 0.08);
 
 
-$radius-16: 16px;
-$radius-8: 8px;
-$radius-4: 4px;
+$size-16: 16px;
+$size-8: 8px;
+$size-4: 4px;
+$size-32: $size-16 * 2;
+
+*{margin: 0;box-sizing: border-box;}
+body{background-color: #F9F8F8;;}
 
 
+.color-green{color: $color-green;}
+.flex-item{
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+    h1{
+            font-size: $size-16 + 2;
+    }
+}
+
+.container{padding: 0px 50px;}
+
+.col-md-6{width: 50%; float: left;}
+.col-md-8{width: 16%; float: left;}
+.col-md-4{width: 25%; float: left;}
+.row{display: flex;}
+
+header{
+    background-color: $color-white;
+    padding: $size-4 + 2;
+}
+
+.menu-side{
+    ul {
+        list-style: none;
+        justify-content: end;
+        align-items: center;
+        height: 46px;
+        padding-right: $size-4;
+        li a{
+            text-decoration: none;
+            color: #000000;
+            font-size: $size-16;
+        }
+    }
+}
+
+.content-overly{
+    h2{
+        line-height: $size-32 + 7; 
+        font-size: $size-16 * 2 - 2;
+    }
+    h2, h3{margin-bottom: $size-8 * 5;}
+    h3{
+        color: $color-gray;
+        font-size: $size-8 * 3 + 2;
+    }
+}
+
+
+@mixin btn1{
+    padding: $size-4 * 2 $size-4 * 2;
+    color: $color-white;
+    background-color: $color-green;
+    text-decoration: none;
+    border-radius: $size-4;
+}
+.btn{
+    display: inline-block;
+    margin-top: $size-16;
+    @include btn1();
+}
+
+.white-box{
+    width: 100%;
+    margin-top: $size-8 * 3 + 6;
+    border-radius: $size-16 - 4;
+    background-color: $color-white;
+    border: 1px solid $color-gray-light;
+    padding: 50px 50px;
+    .img-overly{
+        text-align: end;
+        img{
+            width: 80%;
+        }
+    }
+}
+
+.content-area{
+    h4{
+        color: #000;
+        font-family: Kaisei Decol;
+        font-size: $size-16 + 6;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
