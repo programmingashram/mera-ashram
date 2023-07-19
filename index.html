@@ -206,6 +206,25 @@
             </div>
         </div>
     </article>
+<br><br><br><b></b>
+    <article>
+        <div class="container">
+           <div class="perpul-box">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="left-content">
+                            <h2>Frequently Ask Question</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="right-content">
+                            <a href="#">(+91) 8224973413</a>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </article>
 
      
 
@@ -220,8 +239,8 @@
                 control.addEventListener('click', () => {
                     currentPosition = -slideWidth * index;
                     carouselWrapper.style.transform = `translateX(${currentPosition}px)`;
-                    carouselControls.forEach(control => control.classList.remove('active'));
-                    control.classList.add('active');
+                    carouselControls.forEach(control => control.classList.remove('active-1'));
+                    control.classList.add('active-1');
                 });
             });
         }

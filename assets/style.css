@@ -83,7 +83,7 @@ header {
   border-radius: 4px;
 }
 
-.white-box {
+.white-box, .perpul-box {
   width: 100%;
   margin-top: 30px;
   border-radius: 12px;
@@ -91,10 +91,10 @@ header {
   border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 50px 50px;
 }
-.white-box .img-overly {
+.white-box .img-overly, .perpul-box .img-overly {
   text-align: end;
 }
-.white-box .img-overly img {
+.white-box .img-overly img, .perpul-box .img-overly img {
   width: 80%;
 }
 
@@ -173,7 +173,18 @@ header {
 }
 
 .carousel-control.active-1 {
-  background: rgb(42, 37, 89);
+  background: rgba(0, 0, 0, 0.53);
   width: 20px;
   border-radius: 8px;
+}
+
+.perpul-box {
+  background-color: rgb(191, 178, 243);
+}
+.perpul-box h2, .perpul-box a {
+  color: white;
+  font-size: 30px;
+}
+.perpul-box .right-content {
+  text-align: end;
 }/*# sourceMappingURL=style.css.map */

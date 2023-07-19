@@ -168,7 +168,19 @@ header{
 }
 
 .carousel-control.active-1 {
-    background: rgba(42, 37, 89, 1);
+    background: $color-gray;
     width: 20px;
     border-radius: 8px;
+}
+
+.perpul-box{
+    @extend .white-box;
+    background-color: rgba(191, 178, 243, 1);
+    h2,a{
+        color: $color-white;
+        font-size: $size-32 - 2;
+    }
+    .right-content{
+        text-align: end;
+    }
 }
