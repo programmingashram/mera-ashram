@@ -83,7 +83,7 @@ header {
   border-radius: 4px;
 }
 
-.white-box, .perpul-box {
+.white-box, .light-p-box, .perpul-box {
   width: 100%;
   margin-top: 30px;
   border-radius: 12px;
@@ -91,10 +91,10 @@ header {
   border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 50px 50px;
 }
-.white-box .img-overly, .perpul-box .img-overly {
+.white-box .img-overly, .light-p-box .img-overly, .perpul-box .img-overly {
   text-align: end;
 }
-.white-box .img-overly img, .perpul-box .img-overly img {
+.white-box .img-overly img, .light-p-box .img-overly img, .perpul-box .img-overly img {
   width: 80%;
 }
 
@@ -187,4 +187,43 @@ header {
 }
 .perpul-box .right-content {
   text-align: end;
+}
+
+.light-p-box {
+  background: rgba(59, 180, 74, 0.06);
+}
+
+.slots-block .row {
+  gap: 0 10px;
+}
+
+.card-slot {
+  padding: 11px;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+.card-slot .flex-item {
+  justify-content: space-between;
+}
+.card-slot h2 {
+  font-size: 22px;
+}
+.card-slot p, .card-slot a {
+  font-size: 10px;
+}
+.card-slot .badges-outline {
+  border-radius: 28px;
+  border: 1px solid #D9D9D9;
+  padding: 4px 4px;
+  color: #D9D9D9;
+  font-size: 10px;
+}
+.card-slot .slot-img {
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+  width: 130px;
+  height: 145px;
 }/*# sourceMappingURL=style.css.map */
