@@ -56,7 +56,7 @@
 
     <section class="toolBox">
         <div class="container">
-           <div class="white-box">
+           <div class="white-box reudce-pad">
             <div class="flex-item">
                 <div class="form-control">
                     <input type="search" class="searchbox" placeholder="Search your topic...">
@@ -79,7 +79,7 @@
 
     <article class="practice">
         <div class="container">
-            <div class="white-box">
+            <div class="white-box reudce-pad">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="left-panel">
@@ -109,11 +109,11 @@
                             <div class="tab-panel active" id="tab1">
                                 <div class="accordion">
                                     <div class="accordion-item">
-                                      <div class="accordion-header">Topic for Js </div>
+                                      <div class="accordion-header">Topic for Js 1</div>
                                       <div class="accordion-content">Content for Section 1</div>
                                     </div>
                                     <div class="accordion-item">
-                                        <div class="accordion-header">Topic for Js </div>
+                                        <div class="accordion-header">Topic for Js 2</div>
                                       <div class="accordion-content">Content for Section 2</div>
                                     </div>
                                 </div>
@@ -121,11 +121,11 @@
                             <div class="tab-panel" id="tab2">
                                 <div class="accordion">
                                     <div class="accordion-item">
-                                      <div class="accordion-header">Topic for Angular </div>
+                                      <div class="accordion-header">Topic for Angular 1</div>
                                       <div class="accordion-content">Content for Section 1</div>
                                     </div>
                                     <div class="accordion-item">
-                                        <div class="accordion-header">Topic for Angular </div>
+                                        <div class="accordion-header">Topic for Angular 2</div>
                                       <div class="accordion-content">Content for Section 2</div>
                                     </div>
                                 </div>
@@ -237,26 +237,47 @@
     </footer>
 
     <script>
-        // Get all accordion items
+      const searchInput = document.querySelector('.searchbox');
         const accordionItems = document.querySelectorAll('.accordion-item');
 
-        // Add click event listener to each accordion header
+        searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+
         accordionItems.forEach(item => {
-        const header = item.querySelector('.accordion-header');
-        const content = item.querySelector('.accordion-content');
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+            const headerText = header.textContent.toLowerCase();
+            const isMatch = headerText.includes(searchTerm);
 
-        header.addEventListener('click', () => {
-            // Toggle the active class on the clicked header
-            header.classList.toggle('active');
-
-            // Toggle the display of the content
-            if (content.style.display === 'block') {
-            content.style.display = 'none';
-            } else {
+            if (isMatch) {
+            item.classList.remove('hidden');
             content.style.display = 'block';
+            } else {
+            item.classList.add('hidden');
+            content.style.display = 'none';
             }
         });
         });
+
+    accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
+
+    header.addEventListener('click', () => {
+        const isActive = header.classList.contains('active');
+
+        // Close all accordion items
+        accordionItems.forEach(item => {
+        item.querySelector('.accordion-header').classList.remove('active');
+        item.querySelector('.accordion-content').style.display = 'none';
+        });
+
+        if (!isActive) {
+        header.classList.add('active');
+        content.style.display = 'block';
+        }
+    });
+    });
 
 
         // Get all tab buttons

@@ -382,7 +382,12 @@ footer{
     }
 }
 
+.hidden {
+    display: none;
+  }
+
 .practice{
+    
     .col-md-8{
         .white-box{
             padding: $size-16;
@@ -391,7 +396,10 @@ footer{
         }
     }
 }
-
+.reudce-pad{
+    padding-top: $size-16 + 4;
+    padding-bottom: $size-16 + 4;
+}
 .left-panel{
   
     .white-box{
@@ -413,7 +421,7 @@ footer{
                 border-bottom: 1px solid $color-gray-light;
                  padding: 10px 0px;
                  &.active{
-                    background-color: $color-gray-teal
+                    background-color: $color-gray-light;
                  }
                  a{
                     padding: 0 $size-16 - 1;

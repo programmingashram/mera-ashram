@@ -363,10 +363,19 @@ footer .row {
   border: 10px;
 }
 
+.hidden {
+  display: none;
+}
+
 .practice .col-md-8 .white-box, .practice .col-md-8 .perpul-box, .practice .col-md-8 .light-p-box, .practice .col-md-8 .blue-box {
   padding: 16px;
   height: 350px;
   overflow-y: auto;
+}
+
+.reudce-pad {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .left-panel .white-box, .left-panel .perpul-box, .left-panel .light-p-box, .left-panel .blue-box {
@@ -390,7 +399,7 @@ footer .row {
   padding: 10px 0px;
 }
 .left-panel .white-box ul .list.active, .left-panel .perpul-box ul .list.active, .left-panel .light-p-box ul .list.active, .left-panel .blue-box ul .list.active {
-  background-color: #D9D9D9;
+  background-color: rgba(0, 0, 0, 0.08);
 }
 .left-panel .white-box ul .list a, .left-panel .perpul-box ul .list a, .left-panel .light-p-box ul .list a, .left-panel .blue-box ul .list a {
   padding: 0 15px;
