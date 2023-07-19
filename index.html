@@ -472,25 +472,41 @@
      
 
     <script>
-        function setupCarousel(carousel) {
-            let carouselWrapper = carousel.querySelector('.carousel-wrapper');
-            let carouselControls = carousel.querySelectorAll('.carousel-control');
-            let slideWidth = carouselWrapper.clientWidth / 4;
-            let currentPosition = 0;
-    
-            carouselControls.forEach((control, index) => {
-                control.addEventListener('click', () => {
-                    currentPosition = -slideWidth * index;
-                    carouselWrapper.style.transform = `translateX(${currentPosition}px)`;
-                    carouselControls.forEach(control => control.classList.remove('active-1'));
-                    control.classList.add('active-1');
-                });
-            });
-        }
-    
-        let carousels = document.querySelectorAll('.carousel-container');
-        carousels.forEach(carousel => setupCarousel(carousel));
+       function setupCarousel(carousel) {
+        let carouselWrapper = carousel.querySelector('.carousel-wrapper');
+        let carouselControls = carousel.querySelectorAll('.carousel-control');
+        let slideWidth = carouselWrapper.clientWidth / 10;
+        let currentPosition = 0;
 
+        carouselControls.forEach((control, index) => {
+            control.addEventListener('click', () => {
+                currentPosition = -slideWidth * index;
+                carouselWrapper.style.transform = `translateX(${currentPosition}px)`;
+                carouselControls.forEach(control => control.classList.remove('active-1'));
+                control.classList.add('active-1');
+            });
+        });
+
+        // Automatic movement every 3 seconds
+        setInterval(() => {
+            currentPosition -= slideWidth;
+            if (currentPosition <= -(slideWidth * (carouselControls.length - 1))) {
+                currentPosition = 0;
+            }
+            carouselWrapper.style.transition = 'transform 0.5s ease-in-out'; // Added transition property
+            carouselWrapper.style.transform = `translateX(${currentPosition}px)`;
+            carouselControls.forEach(control => control.classList.remove('active-1'));
+            carouselControls[Math.abs(currentPosition / slideWidth)].classList.add('active-1');
+        }, 5000);
+
+        // Reset transition property after the transition ends
+        carouselWrapper.addEventListener('transitionend', () => {
+            carouselWrapper.style.transition = 'transform 0.5s ease-in-out'; // Added transition property
+        });
+    }
+
+    let carousels = document.querySelectorAll('.carousel-container');
+    carousels.forEach(carousel => setupCarousel(carousel));
 
         $(document).ready(function() {
         setInterval(function() {
