@@ -193,7 +193,7 @@ header {
   background: rgba(59, 180, 74, 0.06);
 }
 
-.slots-block .row {
+.slots-block .row, .session-slot .row {
   gap: 0 10px;
 }
 
@@ -203,6 +203,14 @@ header {
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.08);
   position: relative;
+}
+.card-slot ul {
+  list-style: none;
+  padding-left: 0;
+}
+.card-slot.lg-card img {
+  width: 200px;
+  height: 200px;
 }
 .card-slot .flex-item {
   justify-content: space-between;
