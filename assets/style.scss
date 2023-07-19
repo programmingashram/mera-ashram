@@ -40,6 +40,7 @@ body{background-color: #F9F8F8;;}
 .col-md-6{width: 50%; float: left;}
 .col-md-8{width: 16%; float: left;}
 .col-md-4{width: 33.333%; float: left;}
+.col-md-5{width: 20%; float: left;}
 .row{display: flex;}
 
 header{
@@ -144,6 +145,11 @@ header{
         padding-left: 0;
         margin-top: $size-16;
         line-height: $size-16 + 6;
+        li{
+            i{
+                color: $color-gray;
+            }
+        }
     }
 }
 
@@ -198,9 +204,14 @@ header{
     background: rgba(59, 180, 74, 0.06);
 }
 
-.slots-block, .session-slot{
+.slots-block{
     .row{
         gap: 0 10px;
+    }
+}
+.session-slot{
+    .row{
+        gap: 0 $size-32 * 2;
     }
 }
 .card-slot{
@@ -218,6 +229,18 @@ header{
         width: 200px;
         height: 200px;
     }
+    &.lg-card{
+        ul{
+            li{
+                .fa-check{
+                    margin-right: $size-4 + 2;
+                    color: $color-green;
+                }
+                font-size: $size-16 - 2;
+                margin-bottom: $size-8 + 2;
+            }
+        }
+    }
     .flex-item{
         justify-content: space-between;
     }
@@ -232,7 +255,7 @@ header{
         border-radius: $size-32 - 2 * 2;
         border: 1px solid $color-gray-teal;
         padding: $size-4 $size-4;
-        color: $color-gray-teal;
+        color: $color-gray;
         font-size: $size-8 + 2;
     }
     .slot-img{
@@ -241,5 +264,43 @@ header{
         bottom: 0;
         width: 130px;
         height: 145px;
+    }
+}
+
+footer{
+    .row{
+        gap: 0 46px;
+    }
+}
+
+.blue-box{
+    @extend .white-box;
+    border: 1px solid #0011A8;
+    background: rgba(0, 17, 168, 0.65);
+    margin-bottom: $size-8;
+
+    .footer-widget{
+        border-right: 1px solid $color-white;
+        &.last{
+            border: none;
+        }
+    }
+    
+  
+    h4{
+        font-size: $size-16;
+        margin-bottom: $size-8;
+        color: $color-white;
+    }
+    ul{
+        padding-left: 0;
+        list-style: none;
+        li{
+            margin-bottom: $size-4 + 2;
+            a{
+                color: $color-white;
+                text-decoration: none;
+            }
+        }
     }
 }

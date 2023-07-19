@@ -46,6 +46,11 @@ body {
   float: left;
 }
 
+.col-md-5 {
+  width: 20%;
+  float: left;
+}
+
 .row {
   display: flex;
 }
@@ -90,7 +95,7 @@ header {
   border-radius: 4px;
 }
 
-.white-box, .light-p-box, .perpul-box {
+.white-box, .blue-box, .light-p-box, .perpul-box {
   width: 100%;
   margin-top: 30px;
   border-radius: 12px;
@@ -98,10 +103,10 @@ header {
   border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 50px 50px;
 }
-.white-box .img-overly, .light-p-box .img-overly, .perpul-box .img-overly {
+.white-box .img-overly, .blue-box .img-overly, .light-p-box .img-overly, .perpul-box .img-overly {
   text-align: end;
 }
-.white-box .img-overly img, .light-p-box .img-overly img, .perpul-box .img-overly img {
+.white-box .img-overly img, .blue-box .img-overly img, .light-p-box .img-overly img, .perpul-box .img-overly img {
   width: 80%;
 }
 
@@ -148,6 +153,9 @@ header {
   padding-left: 0;
   margin-top: 16px;
   line-height: 22px;
+}
+.card-details ul li i {
+  color: rgba(0, 0, 0, 0.53);
 }
 
 .carousel-slide {
@@ -200,8 +208,12 @@ header {
   background: rgba(59, 180, 74, 0.06);
 }
 
-.slots-block .row, .session-slot .row {
+.slots-block .row {
   gap: 0 10px;
+}
+
+.session-slot .row {
+  gap: 0 64px;
 }
 
 .card-slot {
@@ -219,6 +231,14 @@ header {
   width: 200px;
   height: 200px;
 }
+.card-slot.lg-card ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.card-slot.lg-card ul li .fa-check {
+  margin-right: 6px;
+  color: #3BB44A;
+}
 .card-slot .flex-item {
   justify-content: space-between;
 }
@@ -232,7 +252,7 @@ header {
   border-radius: 28px;
   border: 1px solid #D9D9D9;
   padding: 4px 4px;
-  color: #D9D9D9;
+  color: rgba(0, 0, 0, 0.53);
   font-size: 10px;
 }
 .card-slot .slot-img {
@@ -241,4 +261,36 @@ header {
   bottom: 0;
   width: 130px;
   height: 145px;
+}
+
+footer .row {
+  gap: 0 46px;
+}
+
+.blue-box {
+  border: 1px solid #0011A8;
+  background: rgba(0, 17, 168, 0.65);
+  margin-bottom: 8px;
+}
+.blue-box .footer-widget {
+  border-right: 1px solid white;
+}
+.blue-box .footer-widget.last {
+  border: none;
+}
+.blue-box h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: white;
+}
+.blue-box ul {
+  padding-left: 0;
+  list-style: none;
+}
+.blue-box ul li {
+  margin-bottom: 6px;
+}
+.blue-box ul li a {
+  color: white;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
