@@ -69,11 +69,11 @@
         </div>
     </section>
 
-    <article>
+    <article class="position-relative">
         <div class="container">
             <div class="white-box">
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="row shape">
+                    <div class="col-md-4">
                         <div class="content-area">
                             <h4>
                                 Book a Free Demo Class
@@ -82,37 +82,152 @@
                             <p>
                                 Learn one-on-one with our highly qualified mentors in a safe online environment. 
                             </p>
-                            <a href="#" class="btn">Book Session</a>
-                        </div>
-                    </div>
-                    <div class="white-box">
-                        <div class="col-md-6">
-                            <div class="course-card">
-                                <div class="card-img">
-                                    <img src="./assets/images/course1.png" alt="">
-                                </div>
-                                <div class="card-details">
-                                    <h1>Front-end Development</h1>
-                                    <ul>
-                                        <li>
-                                            3 Days Free Demo Class 
-                                        </li>
-                                        <li>
-                                            8 Months  Course
-                                        </li>
-                                        <li>
-                                            Live Session & Offline Sessions
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="btn">Book Session</a>
-                                </div>
+                            <br>
+                            <div class="flex-item">
+                                <img src="./assets/images/online.png" alt="">
+                                <img src="./assets/images/offline.png" alt="">
                             </div>
                         </div>
                     </div>
-                   
+                    <div class="col-md-8 carousel-container custom-width shape">
+                            <div class="carousel-wrapper">
+                                <div class="carousel-slide mt">
+                                    <div class="course-card">
+                                        <div class="card-img">
+                                            <img src="./assets/images/course1.png" alt="">
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>Front-end Development</h1>
+                                            <ul>
+                                                <li>
+                                                    3 Days Free Demo Class 
+                                                </li>
+                                                <li>
+                                                    8 Months  Course
+                                                </li>
+                                                <li>
+                                                    Live Session & Offline Sessions
+                                                </li>
+                                            </ul>
+                                            <a href="#" class="btn">Book Session</a>
+                                        </div>
+                                    </div>
+                                    <div class="course-card">
+                                        <div class="card-img">
+                                            <img src="./assets/images/course1.png" alt="">
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>Front-end Development</h1>
+                                            <ul>
+                                                <li>
+                                                    3 Days Free Demo Class 
+                                                </li>
+                                                <li>
+                                                    8 Months  Course
+                                                </li>
+                                                <li>
+                                                    Live Session & Offline Sessions
+                                                </li>
+                                            </ul>
+                                            <a href="#" class="btn">Book Session</a>
+                                        </div>
+                                    </div>
+                                    <div class="course-card">
+                                        <div class="card-img">
+                                            <img src="./assets/images/course1.png" alt="">
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>Front-end Development</h1>
+                                            <ul>
+                                                <li>
+                                                    3 Days Free Demo Class 
+                                                </li>
+                                                <li>
+                                                    8 Months  Course
+                                                </li>
+                                                <li>
+                                                    Live Session & Offline Sessions
+                                                </li>
+                                            </ul>
+                                            <a href="#" class="btn">Book Session</a>
+                                        </div>
+                                    </div>
+                                    <div class="course-card">
+                                        <div class="card-img">
+                                            <img src="./assets/images/course1.png" alt="">
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>Front-end Development</h1>
+                                            <ul>
+                                                <li>
+                                                    3 Days Free Demo Class 
+                                                </li>
+                                                <li>
+                                                    8 Months  Course
+                                                </li>
+                                                <li>
+                                                    Live Session & Offline Sessions
+                                                </li>
+                                            </ul>
+                                            <a href="#" class="btn">Book Session</a>
+                                        </div>
+                                    </div>
+                                    <div class="course-card">
+                                        <div class="card-img">
+                                            <img src="./assets/images/course1.png" alt="">
+                                        </div>
+                                        <div class="card-details">
+                                            <h1>Front-end Development</h1>
+                                            <ul>
+                                                <li> 
+                                                    3 Days Free Demo Class 
+                                                </li>
+                                                <li>
+                                                    8 Months  Course
+                                                </li>
+                                                <li>
+                                                    Live Session & Offline Sessions
+                                                </li>
+                                            </ul>
+                                            <a href="#" class="btn">Book Session</a>
+                                        </div>
+                                    </div>
+                                </div>        
+                            </div>
+                            <div class="carousel-controls">
+                                <span class="carousel-control active-1"></span>
+                                <span class="carousel-control"></span>
+                                <span class="carousel-control"></span>
+                                <span class="carousel-control"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </article>
+
+     
+
+    <script>
+        function setupCarousel(carousel) {
+            let carouselWrapper = carousel.querySelector('.carousel-wrapper');
+            let carouselControls = carousel.querySelectorAll('.carousel-control');
+            let slideWidth = carouselWrapper.clientWidth / 4;
+            let currentPosition = 0;
+    
+            carouselControls.forEach((control, index) => {
+                control.addEventListener('click', () => {
+                    currentPosition = -slideWidth * index;
+                    carouselWrapper.style.transform = `translateX(${currentPosition}px)`;
+                    carouselControls.forEach(control => control.classList.remove('active'));
+                    control.classList.add('active');
+                });
+            });
+        }
+    
+        let carousels = document.querySelectorAll('.carousel-container');
+        carousels.forEach(carousel => setupCarousel(carousel));
+    </script>
 </body>
 </html>

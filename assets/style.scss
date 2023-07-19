@@ -31,7 +31,7 @@ body{background-color: #F9F8F8;;}
 
 .col-md-6{width: 50%; float: left;}
 .col-md-8{width: 16%; float: left;}
-.col-md-4{width: 25%; float: left;}
+.col-md-4{width: 33.333%; float: left;}
 .row{display: flex;}
 
 header{
@@ -99,9 +99,76 @@ header{
     h4{
         color: #000;
         font-family: Kaisei Decol;
-        font-size: $size-16 + 6;
+        font-size: $size-16 + 8;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
     }
+}
+.custom-width{
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    float: left;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.shape{
+    gap: 0 20px;
+    align-items: center;
+}
+.course-card{
+    border-radius: $size-8;
+    border: 1px solid $color-gray-light;
+    .card-img img{
+        width: 262px;
+    }
+}
+.card-details{
+    padding: $size-8;
+    h1{
+        font-size: $size-16 + 2;
+    }
+    ul{
+        list-style: none;
+        padding-left: 0;
+        margin-top: $size-16;
+        line-height: $size-16 + 6;
+    }
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+    gap: 0px $size-16;
+}
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: absolute;
+    bottom: -36px;
+    right: 0;
+    left: 0;
+}
+
+.position-relative{
+    position: relative;
+}
+.carousel-control {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+    
+}
+
+.carousel-control.active-1 {
+    background: rgba(42, 37, 89, 1);
+    width: 20px;
+    border-radius: 8px;
 }
