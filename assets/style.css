@@ -294,4 +294,28 @@ footer .row {
 .blue-box ul li a {
   color: white;
   text-decoration: none;
+}
+
+.slide-animation {
+  position: relative;
+  animation: slide 4s infinite;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  33.33% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  66.66% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }/*# sourceMappingURL=style.css.map */

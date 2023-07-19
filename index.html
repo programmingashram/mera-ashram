@@ -6,6 +6,8 @@
     <title>Welcome - Programing Ashram</title>
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -47,7 +49,7 @@
                     <div class="col-md-6">
                         <div class="content-overly">
                             <h2>
-                                Talent  Management <br>
+                                <span class="slide-animation"  style="font-family: Arial, sans-serif;">Talent</span>  Management <br>
                                 & Training Platform 
                             </h2>
                             <h3>
@@ -488,6 +490,15 @@
     
         let carousels = document.querySelectorAll('.carousel-container');
         carousels.forEach(carousel => setupCarousel(carousel));
+
+
+        $(document).ready(function() {
+        setInterval(function() {
+            var h1Element = $(".slide-animation");
+            var text = h1Element.text().trim();
+            h1Element.text(text === "Talent" ? "प्रतिभा" : "Talent").css("color", "#3BB44A");
+        }, 5000);
+        });
     </script>
 </body>
 </html>
