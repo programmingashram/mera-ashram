@@ -181,6 +181,11 @@ header{
     cursor: pointer;
     
 }
+.interview-slot{
+    .badges-outline{
+        font-size: $size-16 + 2 !important;
+    }
+}
 
 .carousel-control.active-1 {
     background: $color-gray;
