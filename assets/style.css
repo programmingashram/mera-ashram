@@ -76,14 +76,6 @@ header {
   margin: 0 auto;
 }
 
-@keyframes circle {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
 .menu-side ul {
   list-style: none;
   justify-content: end;
@@ -299,6 +291,7 @@ footer .row {
 
 .active-page a {
   color: #3BB44A !important;
+  font-weight: 700;
 }
 
 .blue-box {
