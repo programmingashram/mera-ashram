@@ -155,6 +155,9 @@ header {
 }
 .course-card .card-img img {
   width: 262px;
+  height: 157px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .card-details {
