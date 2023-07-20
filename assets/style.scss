@@ -205,7 +205,7 @@ header{
     background: rgba(59, 180, 74, 0.06);
 }
 
-.slots-block, .practice{
+.slots-block, .practice , .certi-details{
     .row{
         gap: 0 10px;
     }
@@ -255,9 +255,10 @@ header{
     .badges-outline{
         border-radius: $size-32 - 2 * 2;
         border: 1px solid $color-gray-teal;
-        padding: $size-4 $size-4;
+        padding: $size-4 $size-4 + 3;
         color: $color-gray;
         font-size: $size-8 + 2;
+        background-color: $color-white;
     }
     .slot-img{
         position: absolute;
@@ -466,4 +467,53 @@ footer{
 }
   .active{
     display: block;
+  }
+
+  .certificate{
+    .row{
+        align-items: center;
+    }
+  }
+  .certificate-box{
+    img{
+        width: 100%;
+    }
+    h3{
+        color: $color-gray;
+        margin-top: $size-8;
+        text-align: center;
+    }
+  }
+  .user-box{
+    text-align: center;
+  }
+
+  .certi-details{
+    .content-overly{
+        h3{
+            margin: $size-16 0;
+            font-size: $size-16 + 4;
+        }
+        p{
+            margin-bottom: $size-16; 
+        }
+    }
+  }
+  .card-slot:hover{
+    background-color: rgba(249, 248, 248, 1);
+    cursor: pointer;
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.08);
+
+  }
+
+  .interview-slot{
+    .flex-item{
+        align-items: start;
+        margin-bottom: -20px;
+
+
+        &.increase-mar{
+            margin-bottom: 0px;
+        }
+    }
   }
