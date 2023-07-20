@@ -58,8 +58,6 @@ body {
 header {
   background-color: white;
   padding: 6px;
-  position: sticky;
-  top: 0;
 }
 
 .img-overly {
