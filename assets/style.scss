@@ -46,6 +46,8 @@ body{background-color: #F9F8F8;;}
 header{
     background-color: $color-white;
     padding: $size-4 + 2;
+    position: sticky;
+    top: 0;
 }
 
 .menu-side{
